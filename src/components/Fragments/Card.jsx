@@ -1,7 +1,7 @@
 const Card = ({ image, title, desc, genre, eps }) => {
   return (
     <>
-      <div className="cursor-pointer flex flex-col bg-primary rounded-lg w-[190px] h-[395px] shadow-xl p-4 hover:scale-105 hover:opacity-85 transition duration-300 ease-in-out">
+      <div className="cursor-pointer flex flex-col bg-primary rounded-lg w-[190px] lg:h-[395px] md:h-[450px] shadow-xl p-4 hover:scale-105 hover:opacity-85 transition duration-300 ease-in-out">
         <div className="container h-full">
           <img
             className="flex justify-center w-[170px] h-[225px]"
