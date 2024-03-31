@@ -1,9 +1,9 @@
 import Card from "./Card";
 
-const AnimeCard = ({ aniList, sort = "ANIME" }) => {
+const AnimeCard = ({ aniList, sort = "ANIME LIST" }) => {
   return (
     <>
-      <h1 className="text-3xl font-medium pl-24 mb-2">{sort}</h1>
+      <h1 className="text-3xl font-medium pl-24 mb-8">{sort}</h1>
       <div className="flex flex-wrap justify-center gap-10 gap-x-16 mt-4">
         {aniList?.map((item) => (
           <Card

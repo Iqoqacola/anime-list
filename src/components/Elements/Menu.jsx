@@ -1,48 +1,15 @@
-const Menu = () => {
+import ListMenu from "./ListMenu";
+
+const Menu = ({ handleSort }) => {
   return (
     <>
       <nav id="nav-menu" className="">
         <ul className="flex gap-10">
-          <li>
-            <a
-              href="#"
-              className="text-2xl font-semibold text-black hover:text-tersier transition duration-300 ease-in-out"
-            >
-              POPULAR
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-2xl font-semibold text-black hover:text-tersier transition duration-300 ease-in-out"
-            >
-              LATEST
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-2xl font-semibold text-black hover:text-tersier transition duration-300 ease-in-out"
-            >
-              TRENDING
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-2xl font-semibold text-black hover:text-tersier transition duration-300 ease-in-out"
-            >
-              FAVORITE
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="text-2xl font-semibold text-black hover:text-tersier transition duration-300 ease-in-out"
-            >
-              SCORE
-            </a>
-          </li>
+          <ListMenu dataSort="POPULARITY_DESC" handleSort={handleSort}>POPULAR</ListMenu>
+          <ListMenu dataSort="UPDATED_AT_DESC" handleSort={handleSort}>LATEST</ListMenu>
+          <ListMenu dataSort="TRENDING_DESC" handleSort={handleSort}>TRENDING</ListMenu>
+          <ListMenu dataSort="FAVOURITES_DESC" handleSort={handleSort}>FAVORITE</ListMenu>
+          <ListMenu dataSort="SCORE_DESC" handleSort={handleSort}>SCORE</ListMenu>
         </ul>
       </nav>
     </>

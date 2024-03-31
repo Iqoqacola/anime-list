@@ -6,6 +6,7 @@ import getData from "./components/services/graph.service";
 export default function App() {
   const [aniList, setAniList] = useState();
   const [variable, setVariable] = useState({ sort: "END_DATE" });
+  const [sortView, setSortView] = useState();
   const inputRef = useRef(null);
 
   const handleSubmit = (e) => {
@@ -13,16 +14,19 @@ export default function App() {
     const data = inputRef.current.value.toLowerCase();
     const searchAnime = {
       search: data,
-      sort: 'TRENDING_DESC'
+      sort: "TRENDING_DESC",
     };
-    // POPULARITY_DESC
-    // UPDATED_AT_DESC
-    // FAVOURITES_DESC
-    // SCORE_DESC
-    // TRENDING_DESC
-    data == ""
-      ? setVariable({ sort: "END_DATE" })
-      : setVariable(searchAnime);
+    data == "" ? setVariable({ sort: "END_DATE" }) : setVariable(searchAnime);
+    data == "" ? setSortView("ANIME LIST") : setSortView(data.toUpperCase())
+  };
+
+  const handleSort = (e) => {
+    const value = e.target.getAttribute("data-sort");
+    const sort = {
+      sort: value,
+    };
+    setVariable(sort);
+    setSortView(e.target.textContent.toUpperCase())
   };
 
   useEffect(() => {
@@ -31,8 +35,12 @@ export default function App() {
 
   return (
     <>
-      <Header inputRef={inputRef} handleSubmit={handleSubmit}></Header>
-      <Hero aniList={aniList} sort={variable.search?.toUpperCase()}></Hero>
+      <Header
+        inputRef={inputRef}
+        handleSubmit={handleSubmit}
+        handleSort={handleSort}
+      ></Header>
+      <Hero aniList={aniList} sort={sortView}></Hero>
     </>
   );
 }

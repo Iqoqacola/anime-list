@@ -1,7 +1,7 @@
 const Card = ({ image, title, desc, genre, eps }) => {
   return (
     <>
-      <div className="flex flex-col bg-primary rounded-lg w-[190px] h-[470px] shadow-xl p-4">
+      <div className="cursor-pointer flex flex-col bg-primary rounded-lg w-[190px] h-[395px] shadow-xl p-4 hover:scale-105 hover:opacity-85 transition duration-300 ease-in-out">
         <div className="container h-full">
           <img
             className="flex justify-center w-[170px] h-[225px]"
@@ -9,7 +9,10 @@ const Card = ({ image, title, desc, genre, eps }) => {
             alt={title}
           />
           <h2 className="text-xl font-semibold my-2">{title}</h2>
-          <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: desc }}></p>
+          <p
+            className="text-gray-600"
+            dangerouslySetInnerHTML={{ __html: desc }}
+          ></p>
         </div>
 
         <div className="h-full">
@@ -21,7 +24,6 @@ const Card = ({ image, title, desc, genre, eps }) => {
             <span className="flex flex-wrap w-1/2">{genre}</span>
           </span>
         </div>
-        <button className="w-1/2 text-large font-semibold m-2 bg-secondary text-black flex p-2 rounded-md">Detail</button>
       </div>
     </>
   );
