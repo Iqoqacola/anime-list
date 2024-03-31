@@ -5,6 +5,7 @@ const query = `query ($search: String, $sort: [MediaSort]) {
         title {
           romaji
           english
+          native
         }
         coverImage {
           large

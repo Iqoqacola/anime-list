@@ -3,7 +3,7 @@ const ListMenu = ({ children, handleSort, dataSort }) => {
     <li
       data-sort={dataSort}
       onClick={handleSort}
-      className="text-2xl font-semibold text-black hover:text-tersier cursor-pointer transition duration-300 ease-in-out"
+      className="sm:text-lg md:text-xl lg:text-2xl font-semibold text-black hover:text-tersier cursor-pointer transition duration-300 ease-in-out"
     >
       {children}
     </li>

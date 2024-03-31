@@ -1,18 +1,20 @@
 import Card from "./Card";
 
-const AnimeCard = ({ aniList, sort = "ANIME LIST" }) => {
+const AnimeCard = ({ aniList}) => {
   return (
     <>
-      <h1 className="text-3xl font-medium pl-24 mb-8">{sort}</h1>
+      
       <div className="flex flex-wrap justify-center gap-10 gap-x-16 mt-4">
         {aniList?.map((item) => (
           <Card
             key={item.id}
             image={item.coverImage.large}
             title={
-              item.title.english?.length > 35 || item.title.english
-                ? item.title.english?.substring(0, 35) + " ..."
-                : item.title.romaji
+              item.title.english?.length > 35
+                ? item.title.english?.substring(0, 35) + " ..." ||
+                  item.title.romaji?.substring(0, 35) + " ..." ||
+                  item.title.native?.substring(0, 35) + " ..."
+                : item.title.english || item.title.romaji || item.title.native
             }
             desc={
               item.description?.length > 75
