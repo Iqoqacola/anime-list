@@ -9,7 +9,7 @@ const Menu = ({ handleSort }) => {
           <ListMenu dataSort="UPDATED_AT_DESC" handleSort={handleSort}>LATEST</ListMenu>
           <ListMenu dataSort="TRENDING_DESC" handleSort={handleSort}>TRENDING</ListMenu>
           <ListMenu dataSort="FAVOURITES_DESC" handleSort={handleSort}>FAVORITE</ListMenu>
-          <ListMenu dataSort="SCORE_DESC" handleSort={handleSort}>SCORE</ListMenu>
+          <ListMenu dataSort="SCORE_DESC" handleSort={handleSort}>TOP LIST</ListMenu>
         </ul>
       </nav>
     </>

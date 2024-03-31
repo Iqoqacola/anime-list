@@ -17,7 +17,7 @@ export default function App() {
       sort: "TRENDING_DESC",
     };
     data == "" ? setVariable({ sort: "END_DATE" }) : setVariable(searchAnime);
-    data == "" ? setSortView("ANIME LIST") : setSortView(data.toUpperCase())
+    data == "" ? setSortView("ANIME LIST") : setSortView(data.toUpperCase());
   };
 
   const handleSort = (e) => {
@@ -26,7 +26,7 @@ export default function App() {
       sort: value,
     };
     setVariable(sort);
-    setSortView(e.target.textContent.toUpperCase())
+    setSortView(e.target.textContent.toUpperCase());
   };
 
   useEffect(() => {
