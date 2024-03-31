@@ -9,7 +9,6 @@ const Header = ({ inputRef, handleSubmit, handleSort }) => {
     <header className="bg-primary absolute p-2 top-0 left-0 right-0">
       <div className="flex justify-between items-center md:hidden">
         <HamburgerMenu
-          handleClickHamburger={handleClickHamburger}
         ></HamburgerMenu>
         <Logo responsive="flex scale-75"></Logo>
       </div>
