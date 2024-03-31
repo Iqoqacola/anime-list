@@ -4,7 +4,7 @@ const AnimeCard = ({ aniList}) => {
   return (
     <>
       
-      <div className="flex flex-wrap justify-center gap-10 gap-x-16 mt-4">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-10 md:gap-x-16 mt-4">
         {aniList?.map((item) => (
           <Card
             key={item.id}

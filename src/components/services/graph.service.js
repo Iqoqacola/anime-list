@@ -1,5 +1,5 @@
 const query = `query ($search: String, $sort: [MediaSort]) {
-    Page(page: 1, perPage: 30) {
+    Page(page: 1, perPage: 15) {
       media(search: $search, sort: $sort, isAdult: false, type: ANIME) {
         id
         title {
