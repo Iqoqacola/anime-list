@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Menu from "../Elements/Menu";
-import FindAnime from "./FindAnime";
+import FormSearch from "../Elements/FormSearch";
 
-export const HamburgerMenu = ({ handleSort, inputRef, handleSubmit }) => {
+export const HamburgerMenu = ({ handleSort, handleSubmit }) => {
   const [hamburgerActive, setHamburgerActive] = useState(false);
+
   const handleClickHamburger = () => {
     setHamburgerActive(!hamburgerActive);
   };
@@ -28,12 +29,7 @@ export const HamburgerMenu = ({ handleSort, inputRef, handleSubmit }) => {
         }`}
       >
         <div className="flex flex-col items-center justify-center gap-10 mt-10">
-          <FindAnime
-            handleClickHamburger={handleClickHamburger}
-            inputRef={inputRef}
-            handleSubmit={handleSubmit}
-          ></FindAnime>
-
+          <FormSearch handleHamburger={handleClickHamburger} handleSubmit={handleSubmit} />
           <Menu
             handleClickHamburger={handleClickHamburger}
             handleSort={handleSort}

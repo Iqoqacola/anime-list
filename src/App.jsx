@@ -7,17 +7,18 @@ export default function App() {
   const [aniList, setAniList] = useState();
   const [variable, setVariable] = useState({ sort: "END_DATE" });
   const [sortView, setSortView] = useState();
-  const inputRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = inputRef.current.value.toLowerCase();
+    const data = e.target.anime.value.toLowerCase();
     const searchAnime = {
       search: data,
       sort: "TRENDING_DESC",
     };
-    data == "" ? setVariable({ sort: "END_DATE" }) : setVariable(searchAnime);
-    data == "" ? setSortView("ANIME LIST") : setSortView(data.toUpperCase());
+    setTimeout(() => {
+      data == "" ? setVariable({ sort: "END_DATE" }) : setVariable(searchAnime);
+      data == "" ? setSortView("ANIME LIST") : setSortView(data.toUpperCase());
+    }, 200);
   };
 
   const handleSort = (e) => {
@@ -35,11 +36,7 @@ export default function App() {
 
   return (
     <>
-      <Header
-        inputRef={inputRef}
-        handleSubmit={handleSubmit}
-        handleSort={handleSort}
-      ></Header>
+      <Header handleSubmit={handleSubmit} handleSort={handleSort}></Header>
       <Hero aniList={aniList} sort={sortView}></Hero>
     </>
   );
