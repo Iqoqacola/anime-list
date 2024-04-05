@@ -24,7 +24,7 @@ export const AnimeDetail = ({
                 </h3>
               </div>
               <div className="p-4 md:p-5 space-y-4 flex items-center justify-between gap-2 md:gap-10">
-                <img src={image} alt={title} className="md:w-auto md:h-auto w-40 h-56"></img>
+                <img src={image} alt={title} className="md:w-auto md:h-auto h-40"></img>
                 <div className="overflow-auto md:w-auto md:h-[70vh] h-56">
                   <p
                     className="text-base leading-relaxed text-gray-500 dark:text-gray-400"
