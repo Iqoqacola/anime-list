@@ -27,22 +27,22 @@ export const AnimeDetail = ({
                 <img src={image} alt={title} className="md:w-auto md:h-auto h-40"></img>
                 <div className="overflow-auto md:w-auto md:h-[70vh] h-56">
                   <p
-                    className="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                    className="text-xs md:text-base leading-relaxed text-gray-500 dark:text-gray-400"
                     dangerouslySetInnerHTML={{ __html: desc }}
                   ></p>
-                  <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  <p className="text-xs md:text-base leading-relaxed text-gray-500 dark:text-gray-400">
                     <strong className="pr-2">Format:</strong> {format}
                   </p>
-                  <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  <p className="text-xs md:text-base leading-relaxed text-gray-500 dark:text-gray-400">
                     <strong className="pr-2">Episodes:</strong> {eps}
                   </p>
-                  <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  <p className="text-xs md:text-base leading-relaxed text-gray-500 dark:text-gray-400">
                     <strong className="pr-2">Genres:</strong> {genres}
                   </p>
-                  <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  <p className="text-xs md:text-base leading-relaxed text-gray-500 dark:text-gray-400">
                     <strong className="pr-2">Release:</strong> {release}
                   </p>
-                  <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  <p className="text-xs md:text-base leading-relaxed text-gray-500 dark:text-gray-400">
                     <strong className="pr-2">Score:</strong> {score}
                   </p>
                 </div>
