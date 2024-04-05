@@ -1,6 +1,6 @@
-const query = `query ($id: Int, $search: String, $sort: [MediaSort]) {
-    Page(page: 1, perPage: 15) {
-      media(id: $id, search: $search, sort: $sort, isAdult: false, type: ANIME) {
+const query = `query ($id: Int) {
+    Page(page: 1, perPage: 1) {
+      media(id: $id) {
         id
         title {
           romaji
@@ -16,6 +16,7 @@ const query = `query ($id: Int, $search: String, $sort: [MediaSort]) {
         episodes
         genres
         averageScore
+        format
         startDate {
           year
           month
@@ -31,7 +32,7 @@ const query = `query ($id: Int, $search: String, $sort: [MediaSort]) {
   }
   `;
 
-export default async function getData(variables) {
+export default async function getDetailAnime(variables) {
   const url = "https://graphql.anilist.co";
 
   const options = {
@@ -49,6 +50,5 @@ export default async function getData(variables) {
   const response = await fetch(url, options);
   const data = await response.json();
   const animeList = data;
-  // console.log(animeList)
   return animeList.data.Page.media;
 }

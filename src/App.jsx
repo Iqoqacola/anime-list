@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Header from "./components/Layout/Header";
 import Hero from "./components/Layout/Hero";
 import getData from "./components/services/graph.service";
+import { AnimeDetail } from "./components/Fragments/AnimeDetail";
 
 export default function App() {
   const [aniList, setAniList] = useState();

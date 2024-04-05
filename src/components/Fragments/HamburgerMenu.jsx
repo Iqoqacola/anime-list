@@ -24,7 +24,7 @@ export const HamburgerMenu = ({ handleSort, handleSubmit }) => {
         <span className="hamburger-line hamburger-transition origin-bottom-left"></span>
       </button>
       <div
-        className={`fixed left-2 right-2 top-16 bottom-40 z-10 bg-primary rounded-md ${
+        className={`fixed left-2 right-2 top-20 bottom-44 z-10 bg-primary rounded-md ${
           !hamburgerActive ? "hidden" : ""
         }`}
       >
