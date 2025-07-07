@@ -3,7 +3,7 @@ const Card = ({ image, title, desc, genre, eps, id, handleModal }) => {
     <>
       <div
         data-id={id}
-        className="cursor-pointer flex flex-col bg-primary rounded-lg w-[160px] md:w-[190px] lg:h-[395px] md:h-[450px] shadow-xl p-4 hover:scale-105 hover:opacity-85 transition duration-300 ease-in-out"
+        className="cursor-pointer flex flex-col bg-primary rounded-lg w-[160px] md:w-[190px] h-[500px] shadow-xl p-4 hover:scale-105 hover:opacity-85 transition duration-300 ease-in-out"
         onClick={handleModal}
       >
         <div className="container h-full" data-id={id}>
